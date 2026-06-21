@@ -13,3 +13,5 @@ Route::get("Post",[PostController::class, "index"]);
 Route::view("Post/create", 'Post.create');
 Route::put('Post/update/{id}', [PostController::class, 'update']);
 Route::get('Post/edit/{id}', [PostController::class, 'edit']);
+
+require __DIR__.'/auth.php';

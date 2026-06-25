@@ -17,6 +17,9 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::view('/product/create', 'Product.create');
+Route::post('/product/add', [ProductController::class, 'create']);
+Route::get('product', [ProductController::class, 'index']);
 
 Route::post("create-post",[PostController::class, "create"]);
 Route::get("Post",[PostController::class, "index"]);
